@@ -1,0 +1,1 @@
+![Visual Designers Checklist for the Web](https://dl.dropboxusercontent.com/u/41114960/webdesignchecklist.png)
