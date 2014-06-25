@@ -1,0 +1,10 @@
+{
+  "name": "pswebchecklist",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.2",
+    "jquery": "~1.11.1",
+    "normalize-css": "~3.0.1"
+  },
+  "devDependencies": {}
+}
