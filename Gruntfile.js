@@ -332,6 +332,19 @@ module.exports = function (grunt) {
       }
     },
 
+
+    buildcontrol: {
+      dist: {
+        options: {
+          remote: 'git@github.com:grayghostvisuals/webdesignerschecklist.git',
+          branch: 'gh-pages',
+          commit: true,
+          push: true
+        }
+      }
+    },
+
+
     // Generates a custom Modernizr build that includes only the tests you
     // reference in your app
     modernizr: {
@@ -420,6 +433,10 @@ module.exports = function (grunt) {
     'rev',
     'usemin'
     // 'htmlmin'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'buildcontrol'
   ]);
 
   grunt.registerTask('default', [
