@@ -16,19 +16,17 @@ module.exports = function (grunt) {
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
-  // Configurable paths
+  // paths
   var config = {
     app: 'app',
     dist: 'dist'
   };
 
-  // Define the configuration for all the tasks
   grunt.initConfig({
 
     // Project settings
     config: config,
 
-    // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
         files: ['bower.json'],
@@ -68,14 +66,12 @@ module.exports = function (grunt) {
       }
     },
 
-    // The actual grunt server settings
     connect: {
       options: {
         port: 9000,
         open: true,
         livereload: 35729,
-        // Change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
+        hostname: 'localhost' // Use '0.0.0.0' to access server from outside
       },
       livereload: {
         options: {
@@ -125,7 +121,6 @@ module.exports = function (grunt) {
       server: '.tmp'
     },
 
-    // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -139,7 +134,6 @@ module.exports = function (grunt) {
       ]
     },
 
-    // Mocha testing framework configuration options
     mocha: {
       all: {
         options: {
@@ -149,7 +143,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
         sourcemap: true,
@@ -175,10 +168,9 @@ module.exports = function (grunt) {
       }
     },
 
-    // Add vendor prefixed styles
     autoprefixer: {
       options: {
-        browsers: ['last 1 version', 'Explorer 10']
+        browsers: ['last 2 versions']
       },
       dist: {
         files: [{
@@ -261,11 +253,11 @@ module.exports = function (grunt) {
     htmlmin: {
       dist: {
         options: {
-          collapseBooleanAttributes: true,
-          collapseWhitespace: true,
-          removeAttributeQuotes: true,
+          collapseBooleanAttributes: false,
+          collapseWhitespace: false,
+          removeAttributeQuotes: false,
           removeCommentsFromCDATA: true,
-          removeEmptyAttributes: true,
+          removeEmptyAttributes: false,
           removeOptionalTags: true,
           removeRedundantAttributes: true,
           useShortDoctype: true
