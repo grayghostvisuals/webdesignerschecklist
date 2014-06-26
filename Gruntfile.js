@@ -332,18 +332,18 @@ module.exports = function (grunt) {
       }
     },
 
-
     buildcontrol: {
       dist: {
         options: {
           remote: 'git@github.com:grayghostvisuals/webdesignerschecklist.git',
           branch: 'gh-pages',
           commit: true,
-          push: true
+          push: true,
+          connectCommits : true,
+          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
         }
       }
     },
-
 
     // Generates a custom Modernizr build that includes only the tests you
     // reference in your app
