@@ -66,19 +66,22 @@ p {
   margin: 0 auto;
   overflow: auto;
   padding: 2.47225rem 1.236125rem; // 9.889 * 2 = 19.778 / 16 = 1.236125rem * 2 = 2.47225rem
+  width: 100%;
 }
 
 .masthead {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
+  .flexbox & {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
   height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
   background: $global-bg;
   color: #EFEFEF;
 }
@@ -88,6 +91,17 @@ p {
   font-size: 1.854125em; // 25.888 + 3.778 = 29.666 / 16 = 1.854125em
   font-weight: 300;
   line-height: 1.135;
+
+  .no-flexbox & {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 500px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -250px;
+  }
 }
 
 #icon-checklist {
@@ -116,7 +130,12 @@ p {
 }
 
 .scroll-arrow {
-  position: fixed;
+  .flexbox & {
+    position: fixed;
+  }
+  .no-flexbox & {
+    position: absolute;
+  }
   bottom: 1.236125rem; // 9.889 * 2 = 19.778 / 16 = 1.236125rem
   left: 0;
   right: 0;
@@ -139,13 +158,15 @@ p {
 }
 
 main[role="main"] {
-  position:absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateY(100%);
-  width: 100%;
-  z-index: 1;
+  .flexbox & {
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    width: 100%;
+    z-index: 1;
+  }
   background: white;
   
   &:after {
@@ -159,7 +180,7 @@ main[role="main"] {
     width: 100%;
     z-index: -1;
     background: url(../images/graphy.png) top left repeat;
-    opacity: 0.25;
+    opacity: 0.45;
   }
 }
 
