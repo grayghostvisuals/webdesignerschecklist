@@ -5,6 +5,10 @@ gems and packages (gems require ruby 2.1.2)
 $ bundle install && bower install && npm install
 ```
 
+## Development
+
+**working files are within the ``app`` dir**
+
 local server task
 ```shell
 $ grunt serve
