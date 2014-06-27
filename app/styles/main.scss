@@ -78,6 +78,7 @@ p {
     position: fixed;
     top: 0;
     left: 0;
+    transform: translateZ(0);
     width: 100%;
     z-index: -1;
   }
