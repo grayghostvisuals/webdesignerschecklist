@@ -55,6 +55,31 @@ p {
   margin: 0 0 1.236125rem; // 9.889 * 2 = 19.778 / 16 = 1.236125rem
 }
 
+input[type="reset"] {
+  appearance: none;
+  border: 2px solid transparent;
+  display: inline-block;
+  height: auto;
+  max-width: 240px;
+  outline: 0;
+  transition: .3s all ease-in-out;
+  padding: 10px;
+  width: 100%;
+  background: #E9DCDC;
+  color: rgb(68, 66, 66);
+
+  &:focus,
+  &:hover {
+    border: 2px solid #E9DCDC;
+    background: transparent;
+  }
+
+  &:active {
+    outline: 0;
+    border: 2px solid black;
+  }
+}
+
 .container {
   height: 100%;
   position: relative;
@@ -181,7 +206,7 @@ main[role="main"] {
     width: 100%;
     z-index: -1;
     background: url(../images/graphy.png) top left repeat;
-    opacity: 0.45;
+    opacity: 0.35;
   }
 }
 
