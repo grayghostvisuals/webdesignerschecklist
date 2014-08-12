@@ -126,7 +126,7 @@
             <p class="deck">These are merely suggestions for your workflow. Feel free to contribute on <a href="//github.com/grayghostvisuals/webdesignerschecklist">Github</a> or make a fork and create your own unique workflow checklist. This list is meant for visual designers working within a team setting where visual comps and exploration will be shared with a developer. Checkboxes are persistent (<em>they won't uncheck on refresh</em>) where <a href="http://caniuse.com/#search=local%20storage">localstorage</a> is supported.</p>
           </div>
 
-          <form action="/" data-persist="garlic" data-destroy="false" method="post">
+          <form action="/" id="wdc-form" data-persist="garlic" data-destroy="false" method="post">
             <!-- $File Org -->
             <ul class="design-list">
               <li class="list__head"><h3 class="list__title">External File Organization</h3></li>
@@ -518,6 +518,8 @@
                 </label>
               </li>
             </ul>
+
+            <input type="reset" id="cklist-reset" value="Reset">
           </form>
         </section>
 
