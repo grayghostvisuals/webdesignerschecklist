@@ -32,6 +32,7 @@ module.exports = function (grunt) {
         files: ['bower.json'],
         tasks: ['wiredep']
       },
+
       js: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
         tasks: ['jshint'],
@@ -39,25 +40,31 @@ module.exports = function (grunt) {
           livereload: true
         }
       },
+
       jstest: {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['test:watch']
       },
+
       gruntfile: {
         files: ['Gruntfile.js']
       },
+
       sass: {
         files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['sass:server', 'autoprefixer']
       },
+
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
+
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
         },
+
         files: [
           '<%= config.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
@@ -73,6 +80,7 @@ module.exports = function (grunt) {
         livereload: 35729,
         hostname: 'localhost' // Use '0.0.0.0' to access server from outside
       },
+
       livereload: {
         options: {
           middleware: function(connect) {
@@ -84,6 +92,7 @@ module.exports = function (grunt) {
           }
         }
       },
+
       test: {
         options: {
           open: false,
@@ -98,6 +107,7 @@ module.exports = function (grunt) {
           }
         }
       },
+
       dist: {
         options: {
           base: '<%= config.dist %>',
@@ -126,6 +136,7 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish')
       },
+
       all: [
         'Gruntfile.js',
         '<%= config.app %>/scripts/{,*/}*.js',
@@ -148,6 +159,7 @@ module.exports = function (grunt) {
         sourcemap: true,
         loadPath: 'bower_components'
       },
+
       dist: {
         files: [{
           expand: true,
@@ -157,6 +169,7 @@ module.exports = function (grunt) {
           ext: '.css'
         }]
       },
+
       server: {
         files: [{
           expand: true,
@@ -172,6 +185,7 @@ module.exports = function (grunt) {
       options: {
         browsers: ['last 2 versions']
       },
+
       dist: {
         files: [{
           expand: true,
@@ -188,6 +202,7 @@ module.exports = function (grunt) {
         ignorePath: new RegExp('^<%= config.app %>/|../'),
         src: ['<%= config.app %>/index.html']
       },
+
       sass: {
         src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
@@ -215,6 +230,7 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= config.dist %>'
       },
+
       html: '<%= config.app %>/index.html'
     },
 
@@ -223,6 +239,7 @@ module.exports = function (grunt) {
       options: {
         assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
       },
+
       html: ['<%= config.dist %>/{,*/}*.html'],
       css: ['<%= config.dist %>/styles/{,*/}*.css']
     },
@@ -262,6 +279,7 @@ module.exports = function (grunt) {
           removeRedundantAttributes: true,
           useShortDoctype: true
         },
+
         files: [{
           expand: true,
           cwd: '<%= config.dist %>',
@@ -316,6 +334,7 @@ module.exports = function (grunt) {
           ]
         }]
       },
+
       styles: {
         expand: true,
         dot: true,
@@ -361,9 +380,11 @@ module.exports = function (grunt) {
         'sass:server',
         'copy:styles'
       ],
+
       test: [
         'copy:styles'
       ],
+
       dist: [
         'sass',
         'copy:styles',
@@ -378,6 +399,7 @@ module.exports = function (grunt) {
     if (grunt.option('allow-remote')) {
       grunt.config.set('connect.options.hostname', '0.0.0.0');
     }
+
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
