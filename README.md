@@ -28,5 +28,6 @@ $ grunt deploy
 
 - Listed resource in the [Web Field Manual](http://webfieldmanual.com/#workflow)
 - Listed Tool/Resource in Web Design Weekly [Issue #143](http://web-design-weekly.com/2014/07/01/web-design-weekly-143)
+- Featured tool for [Smashing Magazine Newsletter #115](http://www.smashingmagazine.com/smashing-newsletter-issue-115)
  
 ![Visual Designers Checklist for the Web](https://dl.dropboxusercontent.com/u/41114960/webdesignchecklist.png)
