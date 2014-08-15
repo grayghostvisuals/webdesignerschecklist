@@ -157,6 +157,7 @@ module.exports = function (grunt) {
     sass: {
       options: {
         sourcemap: true,
+        style: 'compressed',
         loadPath: 'bower_components'
       },
 
