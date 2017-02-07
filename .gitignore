@@ -1,4 +1,61 @@
 node_modules
 .tmp
 .sass-cache
+
+# Exclude the .htaccess file
+.htaccess
+
+# Exclude any PSD/AI source
+*.psd
+*.ai
+ 
+# Exclude the build products
+build/*
+*.[oa]
+
+# Exclude OS X folder attributes
+.DS_Store
+ 
+# Exclude Text Files
+*.txt
+# Except read me
+!README.txt
+
+# SCSS/SASS
+.sass-cache
+.scss-cache
+
+# CodeKit
+config.codekit
+config.codekit3
+
+#HTMLHint
+*.htmlhintrc
+
+# PrePros
+prepros.cfg
+
+# Exclude log files
+*.log
+
+# Exclude Fonts
+_fonts/
+
+# Exclude Dreamweaver config/sync files
+dwsync.xml
+_notes
+
+# Exclude batch Files
+*.bat
+*.command
+*.pa
+*.sh
+
+# Exclude temp folders
+tmp
+temp
+
+node_modules
 bower_components
+.phpintel
+*.cfg
