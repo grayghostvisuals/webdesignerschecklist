@@ -31,4 +31,4 @@ $ grunt deploy
 - Featured tool for [Smashing Magazine Newsletter #115](http://www.smashingmagazine.com/smashing-newsletter-issue-115)
 - Listed resource in [webdesignrepo](http://www.webdesignrepo.com/)
  
-![Visual Designers Checklist for the Web](https://dl.dropboxusercontent.com/u/41114960/github/wdc/webdesignchecklist.png)
+![Visual Designers Checklist for the Web](https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/webdesignchecklist.png)
